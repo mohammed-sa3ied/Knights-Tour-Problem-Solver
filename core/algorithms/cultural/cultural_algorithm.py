@@ -36,7 +36,7 @@ class CulturalAlgorithm:
         # Stagnation variables
         stagnation_counter = 0
         previous_best_fitness = 0
-        STAGNATION_LIMIT = 500
+        STAGNATION_LIMIT = 2000
 
         # Check Gen 0 immediately
         self.population.sort(key=lambda x: x.fitness, reverse=True)
