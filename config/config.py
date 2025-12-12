@@ -1,0 +1,48 @@
+"""
+Configuration file for Knight's Tour Project
+"""
+
+# Board Configuration
+DEFAULT_BOARD_SIZE = 8
+MIN_BOARD_SIZE = 5
+MAX_BOARD_SIZE = 10
+
+# Cultural Algorithm Parameters
+CA_POPULATION_SIZE = 400
+CA_MAX_GENERATIONS = 3000
+CA_CROSSOVER_PROB = 0.9
+CA_MUTATION_PROB = 0.3
+CA_ELITE_RATIO = 0.1
+
+# Belief Space Parameters
+BELIEF_ACCEPTANCE_RATE = 0.25
+BELIEF_SITUATIONAL_SIZE = 8
+BELIEF_SITUATIONAL_INFLUENCE_PROB = 0.8
+BELIEF_NORMATIVE_INFLUENCE_PROB = 0.7
+BELIEF_HISTORICAL_INFLUENCE_PROB = 0.6
+
+# Stagnation and Restart
+STAGNATION_THRESHOLD = 200
+RESTART_PROBABILITY = 0.3
+
+# GUI Configuration
+GUI_CELL_SIZE = 60
+GUI_UPDATE_INTERVAL = 5  # Update GUI every N generations
+GUI_ANIMATION_DELAY = 0.2  # seconds
+
+# Colors
+COLOR_LIGHT_SQUARE = "#F0D9B5"
+COLOR_DARK_SQUARE = "#B58863"
+COLOR_PATH = "#00FF96"
+COLOR_KNIGHT = "black"
+COLOR_START_BUTTON = "#d40000"
+COLOR_STOP_BUTTON = "#555555"
+
+# Database Configuration (if needed later)
+DB_PATH = "db/knight_tour.db"
+SAVE_SOLUTIONS = True
+
+# Logging
+LOG_LEVEL = "INFO"
+LOG_TO_FILE = False
+LOG_FILE_PATH = "knight_tour.log"

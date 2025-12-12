@@ -1,25 +1,21 @@
-import random
-
 class Board:
-    def __init__(self, size=8):
+    def __init__(self, size):
         self.size = size
-        self.num_squares = size * size 
-        self.valid_moves = self._precompute_valid_moves()  
+        self.num_squares = size * size
+        self.valid_moves = self._precompute_valid_moves()
 
     def _precompute_valid_moves(self):
-        deltas = [(2, 1), (1, 2), (-1, 2), (-2, 1),
-                  (-2, -1), (-1, -2), (1, -2), (2, -1)]
+        deltas = [(2,1),(1,2),(-1,2),(-2,1),(-2,-1),(-1,-2),(1,-2),(2,-1)]
         moves = {}
-        for square in range(self.num_squares):
-            row, col = divmod(square, self.size)
+        for sq in range(self.num_squares):
+            r, c = divmod(sq, self.size)
             neighbors = []
             for dr, dc in deltas:
-                new_row, new_col = row + dr, col + dc
-                if 0 <= new_row < self.size and 0 <= new_col < self.size:
-                    target = new_row * self.size + new_col
-                    neighbors.append(target)
-            moves[square] = neighbors
+                nr, nc = r + dr, c + dc
+                if 0 <= nr < self.size and 0 <= nc < self.size:
+                    neighbors.append(nr * self.size + nc)
+            moves[sq] = neighbors
         return moves
 
-    def is_valid_move(self, from_sq, to_sq):
-        return to_sq in self.valid_moves[from_sq]
+    def is_valid_move(self, a, b):
+        return b in self.valid_moves[a]

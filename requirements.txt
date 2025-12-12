@@ -1,0 +1,11 @@
+# Knight's Tour Project Dependencies
+
+# Core Python libraries (usually pre-installed)
+# tkinter - GUI framework (comes with Python)
+
+# No external dependencies required!
+# This project uses only Python standard library.
+
+# Optional: For development
+# pytest>=7.0.0  # For unit testing
+# pylint>=2.15.0 # For code quality
