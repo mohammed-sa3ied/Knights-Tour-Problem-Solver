@@ -1,12 +1,21 @@
-﻿# core/__init__.py
+﻿from .board import Board
 
-from .board import Board
+# Backtracking algorithms
 from .algorithms.backtracking.brute_force import BruteForceBacktracking
 from .algorithms.backtracking.randomized_heuristic import BacktrackingSolver as RandomizedBacktracking
 from .algorithms.backtracking.warnsdorff import WarnsdorffBacktracking
-from .algorithms.cultural.cultural_algorithm import CulturalAlgorithm
-from .algorithms.genetic.ga_classic import GeneticAlgorithmClassic
-from .algorithms.genetic.ga_optimized import GeneticAlgorithmOptimized
+
+# Cultural algorithm
+try:
+    from .algorithms.cultural.cultural_algorithm import CulturalAlgorithm
+    CA_AVAILABLE = True
+except ImportError:
+    CA_AVAILABLE = False
+
+# Genetic algorithms with aliases
+from .algorithms.genetic.ga_classic import GeneticAlgorithm as GeneticAlgorithmClassic
+from .algorithms.genetic.GA_classic_opt import GeneticAlgorithm as GeneticAlgorithmOptimized
+from .algorithms.genetic.GA_Warnsdorff import GeneticAlgorithm as GeneticAlgorithmElitism
 
 __all__ = [
     'Board',
@@ -15,5 +24,6 @@ __all__ = [
     'WarnsdorffBacktracking',
     'CulturalAlgorithm',
     'GeneticAlgorithmClassic',
-    'GeneticAlgorithmOptimized'
+    'GeneticAlgorithmOptimized',
+    'GeneticAlgorithmElitism'
 ]
