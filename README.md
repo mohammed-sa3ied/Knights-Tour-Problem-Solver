@@ -5,11 +5,11 @@ A comprehensive solution to the **Knight's Tour Problem** using **Cultural Algor
 ## 👥 Team Members
 
 - **Salma Mohamed Abdelaziz**
-- **Rawan Essam Eldin**
-- **Rowayda Mohamed Khairy**
+- **Rawan Essam-ElDin Fahmy**
+- **Rowayda Mohammed Khairy**
 - **Salma Ashraf**
 - **Zeiad Saher Salama**
-- **Mohamed Saeid Ahmed**
+- **Mohamed Saied Ahmed**
 
 ---
 
